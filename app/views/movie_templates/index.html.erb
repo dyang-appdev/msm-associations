@@ -2,7 +2,7 @@
   All movies
 </h1>
 
-<a href="/movies/new">
+<a href="/movies/new" class="btn btn-block btn-outline-secondary">
   Add a new movie
 </a>
 
@@ -29,6 +29,10 @@
     <th>
       Description
     </th>
+    
+    <th>
+      Director
+    </th>
 
     <th>
     </th>
@@ -54,6 +58,12 @@
 
     <td>
       <%= movie.description %>
+    </td>
+    
+    <td>
+      <a href="/directors/<%= movie.director_id %>">
+        <%= movie.director.name %>
+      </a>
     </td>
 
     <td>
